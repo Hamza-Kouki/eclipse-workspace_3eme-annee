@@ -25,7 +25,7 @@
                     </c:choose>
                 </c:when>
                 
-                <c:otherwise>
+                 <c:otherwise>
                     <p>  Le nombre : <b style="color:red;">${i}</b> n'est pas un nombre premier .<br/></p> 
                 </c:otherwise>
             </c:choose>
