@@ -15,6 +15,6 @@
     </session-config>
     
     <welcome-file-list>
-    <welcome-file>EtudiantVue.jsp</welcome-file>
+    <welcome-file>Redirect.jsp</welcome-file>
     </welcome-file-list>
 </web-app>
