@@ -21,7 +21,7 @@
         
         La valeur de n : 
         <br><br>
-        <!-- the action below is just an alias / a fake path , to modify it refer to web.xml-->
+
         <form action="Calculer.php" method="post">
        
             <input type="text" name="n" value=""><br><br>

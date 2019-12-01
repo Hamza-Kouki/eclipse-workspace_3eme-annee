@@ -13,7 +13,7 @@
         
         <h1 style="text-align: center;">Chercher un étudiant</h1>
         
-        <form action="Servlet" method="POST">
+        <form action="Etudiant.php" method="POST">
             <b>Nom :</b>
             <input type="text" maxlength="20" placeholder="Student Name" name="Sname"/>
             <input type="submit" value="Chercher"/>

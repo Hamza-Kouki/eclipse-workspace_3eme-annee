@@ -1,5 +1,6 @@
 package métier;
 import java.sql.Connection;
+
 import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -18,8 +19,8 @@ public class Conn {
     try {
 
         Class.forName("com.mysql.jdbc.Driver"); 
-    this.conn =   DriverManager.getConnection("jdbc:mysql://localhost:3306/db_gestion?zeroDateTimeBehavior=convertToNull","root","0wq8a6tt");
-    
+ //   this.conn =   DriverManager.getConnection("jdbc:mysql://localhost:3306/db_gestion?zeroDateTimeBehavior=convertToNull","root","");
+        this.conn =   DriverManager.getConnection("jdbc:mysql:localhost:3306","root","");
     System.out.println("Successfull Connection To Your DataBase : \n");
     System.out.println("Current database is : \"db_gestion\" => 'etudiant' .");
     
