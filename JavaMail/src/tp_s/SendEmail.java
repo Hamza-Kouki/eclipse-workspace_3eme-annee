@@ -1,5 +1,6 @@
 package tp_s;
 import java.util.*;
+
 import javax.mail.*;
 import javax.mail.internet.*;
 import javax.activation.*;
@@ -15,7 +16,7 @@ public class SendEmail {
 		
 		String pwd= "mouheblerrasoull";
 		
-		String to= "khalfikaoula@gmail.com";
+		String to= "koukihamza33@gmail.com";
 		
 		System.out.println("Host: "+host+"\nFrom: "+from+"\n To:"+to);
 		
@@ -31,8 +32,8 @@ public class SendEmail {
 		try {
 		message.setFrom(new InternetAddress(from));
 		message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
-		message.setSubject("Hello it's khawla");
-		message.setText("hi this is khawla and this is a simple text for testing");
+		message.setSubject("Hello it's Hamza");
+		message.setText("hi this is Hamza and this is a simple text for testing");
 		
 		System.out.println("Tentative de connexion...");
 		t = session.getTransport("smtps");
