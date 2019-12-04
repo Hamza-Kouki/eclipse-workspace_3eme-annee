@@ -61,7 +61,7 @@ public class GetData {
 				String  host="smtp.gmail.com",
 						from= "hamzakouki33@gmail.com",
 						login= "hamzakouki33@gmail.com",
-						pwd= "mouheblerrasoull",
+						pwd= "****************",
 						to=EmailAbonne,
 						TextEmail=Text ;
 
