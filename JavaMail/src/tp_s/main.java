@@ -5,14 +5,14 @@ public class main {
 		String  host="smtp.gmail.com",
 				from= "hamzakouki33@gmail.com",
 				login= "hamzakouki33@gmail.com",
-				pwd= "******************",
+				pwd= "mouheblerrasoull",
 				to= "koukihamza33@gmail.com";
 
-	/*	SendEmail object = new SendEmail();
+		SendEmail object = new SendEmail();
 		object.sendMsgMethod(host, from, login, pwd, to);
-		object.usage();*/
+		object.usage();
  
-		ReceiverEmail objectR = new ReceiverEmail();
-		objectR .receiveEmail(host,"pop3",login,pwd);
+		/*ReceiverEmail objectR = new ReceiverEmail();
+		objectR .receiveEmail(host,"pop3",login,pwd);*/
 	}
 }
