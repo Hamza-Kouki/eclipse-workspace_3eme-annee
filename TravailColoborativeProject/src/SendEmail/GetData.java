@@ -8,7 +8,6 @@ public class GetData {
 			Connection con=DriverManager.getConnection(  
 			"jdbc:mysql://localhost:3306/TravailColoborativeProject","root","");  
 		//	==========================================================================
-			//SessForm (idSess, date_Debut, date_Fin, date_LimiteInscription, capacite, type, lieu,adresse, cible, prix, description, sujet, programme) 
 			Statement stmt=con.createStatement();  
 			ResultSet rs=stmt.executeQuery("select *  from SessForm where idSess ='" + 1 + "' ");  
 			String  date_Debut =null , date_Fin =null , date_LimiteInscription =null, type =null , lieu =null, adresse =null,description =null,sujet =null,programme =null;
@@ -28,35 +27,34 @@ public class GetData {
 				programme = rs.getString(13);
 				
 			} 
-			con.close();;
 			//	==========================================================================  
 			for(int i= 1 ; i<=4;i++) {
-				Statement statement=con.createStatement();  
-				ResultSet resultSet=statement.executeQuery("select *  from abonnes where idAbonne ='" + i + "' ");  
+				//Statement statement=con.createStatement();  
+				ResultSet resultSet=stmt.executeQuery("select *  from abonnes where idAbonne ='" + i + "' ");  
 				String  NomAbonne = null , PrenomAbonne = null , AdresseAbonne= null , EmailAbonne = null;
 				int TelAbonne = 0; 
 				while(resultSet.next()) {
-					NomAbonne = rs.getString(2);
-					PrenomAbonne = rs.getString(3);
-					AdresseAbonne = rs.getString(4);
-					TelAbonne = rs.getInt(5);
-					EmailAbonne = rs.getString(6);
+					NomAbonne = resultSet.getString(2);
+					PrenomAbonne = resultSet.getString(3);
+					AdresseAbonne = resultSet.getString(4);
+					TelAbonne = resultSet.getInt(5);
+					EmailAbonne = resultSet.getString(6);
 					
 				} 
 				
                  String Text=null;
                  Text = " Evenement newsLetter \n "
                   		+ "Madame/monsieur  :  "+ PrenomAbonne +" "+NomAbonne +"\n"
- 						+ "Sujet" + sujet +"\n"
-                 		+ "DAte debut Evenement:" + date_Debut +"\n"
-                 		+ "DAte Fin Evenement:" + date_Fin +"\n"
-                 		+ "DAte limite  Inscription:" + date_LimiteInscription +"\n"
+ 						+ "Sujet " + sujet +"\n"
+                 		+ "Date debut Evenement: " + date_Debut +"\n"
+                 		+ "Date Fin Evenement: " + date_Fin +"\n"
+                 		+ "Date Limite  Inscription: " + date_LimiteInscription +"\n"
  						+ "Descriptiopn : "  +description +"\n"
  						+ "Programme : " + programme +"\n"
  						+ "Prix : " + prix +"\n"
- 						+ "Capcite :" +capacite+"\n"
- 						+ "Adressé :" +adresse+"\n"
- 						+"Merci d'être venu :)";
+ 						+ "Capcite : " +capacite+"\n"
+ 						+ "Adressé : " +adresse+"\n"
+ 						+"Merci d'être venu ";
                  		
 				//System.out.println(Email);
 				//----------------------------------------------
@@ -68,10 +66,9 @@ public class GetData {
 						TextEmail=Text ;
 
 				SendE_mail object = new SendE_mail();
-				object.sendMsgMethod(host, from, login, pwd, to,TextEmail);
-
-			con.close();  
+				object.sendMsgMethod(host, from, login, pwd, to,TextEmail); 
 			}
+			con.close(); 
 			}catch(Exception e){ System.out.println(e);}  
 			}  
 }
