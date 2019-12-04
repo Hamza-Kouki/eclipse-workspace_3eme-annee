@@ -5,7 +5,7 @@ import java.util.Properties;
 import javax.mail.*;
 
 public class ReceiverEmail {
-
+		public void ReceiverEmail(){}
 		public static void receiveEmail(String pop3Host, String storeType,final String user, final
 		String password) {
 		 try {
@@ -39,21 +39,10 @@ public class ReceiverEmail {
 		 System.out.println("Text: " + message.getContent().toString());
 
 		 }
-		 // close the store and folder objects
 		 emailFolder.close(false);
 		 emailStore.close();
 		 } catch (MessagingException e) {e.printStackTrace();}
 		 catch (IOException e) {e.printStackTrace();}
 		 }
-		public static void main(String[] args) {
-			String host="smtp.gmail.com";
-			
-			String login= "hamzakouki33@gmail.com";
-			
-			String pwd= "mouheblerrasoull";
-			
-		receiveEmail(host,"pop3",login,pwd);
-		
-		
-		}
+
 }
