@@ -1,0 +1,11 @@
+127.0.0.1 - - [13/Nov/2019:12:32:42 +0100] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [13/Nov/2019:12:32:43 +0100] "GET /Ex1S2/ HTTP/1.1" 404 1084
+0:0:0:0:0:0:0:1 - - [13/Nov/2019:12:33:37 +0100] "GET /Ex1S2/WEB-INF/classes/web/ControlServletSerie.java HTTP/1.1" 404 1047
+0:0:0:0:0:0:0:1 - - [13/Nov/2019:12:34:29 +0100] "GET /Ex1S2/ControlServletSerie HTTP/1.1" 404 1103
+127.0.0.1 - - [13/Nov/2019:13:38:54 +0100] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [13/Nov/2019:13:38:54 +0100] "GET /Serie2Excercice1/WEB-INF/classes/web/ControleServletSerie.java HTTP/1.1" 404 1047
+0:0:0:0:0:0:0:1 - - [13/Nov/2019:13:39:26 +0100] "GET /Serie2Excercice1/ HTTP/1.1" 404 1095
+0:0:0:0:0:0:0:1 - - [13/Nov/2019:13:39:41 +0100] "GET /Serie2Excercice1/controller.php HTTP/1.1" 404 1109
+127.0.0.1 - - [13/Nov/2019:13:40:21 +0100] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [13/Nov/2019:13:40:21 +0100] "GET /Serie2Excercice1/WEB-INF/classes/web/ControleServletSerie.java HTTP/1.1" 404 1047
+0:0:0:0:0:0:0:1 - - [13/Nov/2019:13:40:33 +0100] "GET /Serie2Excercice1/controller.php HTTP/1.1" 404 1109

@@ -1,0 +1,58 @@
+package SendEmail;
+
+import java.sql.*;
+
+public class EventClass {
+	
+	//public EventClass() {}
+	
+	//public int EventList(int j ) {
+	public static void main(String args[]){  
+		try{  
+			ConnexionClass objectCon = new ConnexionClass();
+			Connection con=objectCon.getConn();
+			//-------------------------------------------------------------------------------------------		
+			for(int i=1;i<=4;i++){
+				Statement stmt=con.createStatement();  
+				ResultSet rs=stmt.executeQuery("select *  from SessForm where idSess ='" + i + "' ");  
+			//	String  date_Debut =null , date_Fin =null , date_LimiteInscription =null, type =null , lieu =null, adresse =null,description =null,sujet =null,programme =null;
+			//	int capacite = 0;
+			//	double prix = 0.;
+				while(rs.next()) {
+				/*	date_Debut = rs.getString(2);
+					date_Fin = rs.getString(3);
+					date_LimiteInscription = rs.getString(4);
+					capacite = rs.getInt(3);
+					type = rs.getString(6);
+					lieu = rs.getString(7);
+					adresse = rs.getString(8);
+					prix = rs.getDouble(10);
+					description = rs.getString(11);
+					sujet = rs.getString(12);
+					programme = rs.getString(13);*/
+					
+				System.out.println(
+						"ID" + rs.getString(1) + "date_Debut" + rs.getString(2) + "date_Fin" + rs.getString(3)
+						+ "date_LimiteInscription" + rs.getString(4) + "capacite" + rs.getInt(3) + 
+						"type"+ rs.getString(6)+"lieu"+rs.getString(7)+"adresse"+rs.getString(8)
+						+"prix"+rs.getDouble(10)+"description"+rs.getString(11)+"sujet"
+						+ rs.getString(12)+"programme"+rs.getString(13)
+						);
+					
+				} 
+			}
+			con.close(); 
+			//-------------------------------------------------------------------------------------------		
+		}catch(Exception e){
+			//System.out.println(e);
+			System.err.println(e);
+			
+		}
+		
+	//	return j;
+	}
+		
+		
+	
+
+}

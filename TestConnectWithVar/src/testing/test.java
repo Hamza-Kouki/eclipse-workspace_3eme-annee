@@ -3,11 +3,15 @@ import java.sql.*;
 public class test {
 	public static void main(String args[]){  
 		int i = 1;
-		
 		try{  
-			Class.forName("com.mysql.jdbc.Driver");  
+			
+			ConnexionClass objectCon = new ConnexionClass();
+			Connection con=objectCon.Conn();
+			
+			/*Class.forName("com.mysql.jdbc.Driver");  
 			Connection con=DriverManager.getConnection(  
-			"jdbc:mysql://localhost:3306/TravailColoborativeProject","root","");  
+			"jdbc:mysql://localhost:3306/TravailColoborativeProject","root","");  */
+			
 
 			Statement stmt=con.createStatement();  
 			ResultSet rs=stmt.executeQuery("select * from abonnes where idAbonne ='" + i + "' ");  

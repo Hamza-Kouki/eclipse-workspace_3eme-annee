@@ -1,0 +1,55 @@
+package tp;
+import java.util.*;
+import javax.mail.*;
+import javax.mail.internet.*;
+import javax.activation.*;
+
+public class SendEmail {
+	//public static void main(String[]args) {
+		
+		String host="smtp.gmail.com";
+		
+		String from= "hamzakouki33@gmail.com";
+		
+		String login= "hamzakouki33@gmail.com";
+		
+		String pwd= "mouheblerrasoull";
+		
+		String to= "khalfikaoula@gmail.com";
+		
+		System.out.println("Host: "+host+"\nFrom: "+from+"\n To:"+to);
+		
+		Transport t= null;
+		
+		 Properties properties = System.getProperties();
+		 
+		 properties.setProperty("mail.smtp.host", host);
+		 Session session = Session.getDefaultInstance(properties ,null);
+		 MimeMessage message = new MimeMessage(session);
+		 
+		
+		try {
+		message.setFrom(new InternetAddress(from));
+		message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
+		message.setSubject("Hello it's khawla");
+		message.setText("hi this is khawla and this is a simple text for testing");
+		
+		System.out.println("Tentative de connexion...");
+		t = session.getTransport("smtps");
+		
+        t.connect(host, login, pwd);
+
+			
+		System.out.println("Envoi de mail...");
+		t.sendMessage(message , message.getAllRecipients());
+		
+		System.out.println("Mail envoyé avec succés");
+	}
+		catch(Exception ex) {
+			ex.printStackTrace();}
+	}
+	private static void usage() {
+		System.out.println("usage : java sendMsg  <smtp> <from> <login> <pwd> <to>");
+	}
+		
+}

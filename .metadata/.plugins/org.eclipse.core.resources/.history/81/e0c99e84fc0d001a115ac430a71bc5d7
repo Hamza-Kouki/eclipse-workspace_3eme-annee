@@ -1,0 +1,55 @@
+package web;
+
+import java.io.IOException;
+
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import metier.CalculSommeSerie;
+
+ /* Se rvlet implementation class ControleServletSerie*/
+/*@WebServlet("/ControleServletSerie")*/
+/*@WebServlet( name ="cs" ,urlPattrens="*controller.php")*/
+public class ControleServletSerie extends HttpServlet {
+	//private static final long serialVersionUID = 1L;
+	private CalculSommeSerie calculesomme;
+       
+	public void init() throws ServletException{
+		calculesomme = new CalculSommeSerie();
+	}
+     /* @see HttpServlet#HttpServlet()
+     */
+    public ControleServletSerie() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath()); 
+		request.setAttribute("somme : " , new Serie());
+		request.getRequestDispatcher("viewSerie.jsp").forward(request, response) ;
+		
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		int n = Integer.parseInt(request.getParameter("n"));
+		Serie s = new Serie();
+		float somme = calculesomme.CalculSomme(n);
+		s.setSomme(somme);
+		request.setAttribute("somme : " , s);
+		request.getRequestDispatcher("viewSerie.jsp").forward(request, response) ;
+		//doGet(request, response);
+	}
+
+}

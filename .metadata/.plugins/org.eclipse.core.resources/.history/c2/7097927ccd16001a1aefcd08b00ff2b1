@@ -1,0 +1,45 @@
+package SendEmail;
+
+import java.sql.*;
+public class GetData {
+	public static void main(String args[]){  
+		try{  
+			Class.forName("com.mysql.jdbc.Driver");  
+			Connection con=DriverManager.getConnection(  
+			"jdbc:mysql://localhost:3306/TravailColoborativeProject","root","");  
+			for(int i= 1 ; i<=4;i++) {
+				Statement stmt=con.createStatement();  
+				ResultSet rs=stmt.executeQuery("select *  from abonnes where idAbonne ='" + i + "' ");  
+				String  NomAbonne = null , PrenomAbonne = null , AdresseAbonne= null , EmailAbonne = null;
+				int TelAbonne = 0; 
+				while(rs.next()) {
+					NomAbonne = rs.getString(2);
+					PrenomAbonne = rs.getString(3);
+					AdresseAbonne = rs.getString(4);
+					TelAbonne = rs.getInt(5);
+					EmailAbonne = rs.getString(6);
+				} 
+				//SessForm (idSess, date_Debut, date_Fin, date_LimiteInscription, capacite, type, lieu,adresse, cible, prix, description, sujet, programme) 
+				
+                 String Text=null;
+                 Text = "This is an event newsLetter \n "
+                 		+ "To Master/Madem :  "+ PrenomAbonne +" "+NomAbonne +"\n"
+                		+ "";
+                 		
+				//System.out.println(Email);
+				//----------------------------------------------
+				String  host="smtp.gmail.com",
+						from= "hamzakouki33@gmail.com",
+						login= "hamzakouki33@gmail.com",
+						pwd= "mouheblerrasoull",
+						to=EmailAbonne,
+						TextEmail=Text ;
+
+				SendE_mail object = new SendE_mail();
+				object.sendMsgMethod(host, from, login, pwd, to,TextEmail);
+
+			con.close();  
+			}
+			}catch(Exception e){ System.out.println(e);}  
+			}  
+}

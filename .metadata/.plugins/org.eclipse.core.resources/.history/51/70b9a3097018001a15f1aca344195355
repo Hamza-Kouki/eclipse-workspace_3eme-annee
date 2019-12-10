@@ -1,0 +1,16 @@
+package SendEmail;
+
+import java.sql.Connection;
+
+import testing.ConnexionClass;
+
+public class main {
+	public static void main(String[]args) {
+		
+		/*ConnexionClass objectCon = new ConnexionClass();
+		Connection con=objectCon.Conn();*/
+		//---
+		EventClass ObjectEventClass = new EventClass();
+		ObjectEventClass.EventList(Connection con);
+	}
+}

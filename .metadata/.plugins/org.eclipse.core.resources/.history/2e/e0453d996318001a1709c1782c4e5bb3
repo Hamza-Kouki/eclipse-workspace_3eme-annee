@@ -1,0 +1,8 @@
+package SendEmail;
+
+import java.sql.*;
+
+public class ConnexionClass {
+	
+	}
+

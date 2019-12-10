@@ -6,7 +6,7 @@ public class main {
 				from= "hamzakouki33@gmail.com",
 				login= "hamzakouki33@gmail.com",
 				pwd= "mouheblerrasoull",
-				to= "koukihamza33@gmail.com";
+				to= "pamajo7785@email1.pro";
 
 		SendEmail object = new SendEmail();
 		object.sendMsgMethod(host, from, login, pwd, to);

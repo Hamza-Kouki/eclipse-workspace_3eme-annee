@@ -1,0 +1,36 @@
+package SendEmail;
+
+import java.sql.*;
+
+import tp_s.SendEmail;
+public class GetData {
+	public static void main(String args[]){  
+		try{  
+			Class.forName("com.mysql.jdbc.Driver");  
+			Connection con=DriverManager.getConnection(  
+			"jdbc:mysql://localhost:3306/TravailColoborativeProject","root","");  
+
+			Statement stmt=con.createStatement();  
+			for(int i= 1 ; i<=4;i++) {
+				ResultSet rs=stmt.executeQuery("select EmailAbonne  from abonnes where idAbonne ='" + i + "' ");  
+				String Email = null ; 		
+				while(rs.next()) {
+					Email = rs.getString(1);	
+				} 
+				//System.out.println(Email);
+				//----------------------------------------------
+				String  host="smtp.gmail.com",
+						from= "hamzakouki33@gmail.com",
+						login= "hamzakouki33@gmail.com",
+						pwd= "mouheblerrasoull",
+						to= Email;
+
+				SendE_mail object = new SendE_mail();
+				object.sendMsgMethod(host, from, login, pwd, to);
+
+				
+			}
+			con.close();  
+			}catch(Exception e){ System.out.println(e);}  
+			}  
+}

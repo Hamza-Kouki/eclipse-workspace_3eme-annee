@@ -1,0 +1,16 @@
+package tp_s;
+
+public class main {
+	public static void main(String[] args) {
+		String from= "hamzakouki33@gmail.com";
+		
+		String login= "hamzakouki33@gmail.com";
+		
+		String pwd= "mouheblerrasoull";
+		
+		String to= "koukihamza33@gmail.com";
+		
+		SendEmail sendemail = new SendEmail();
+		//sendemail.sendMsgMethod(from,login,pwd,to);
+	}
+}

@@ -1,0 +1,12 @@
+127.0.0.1 - - [07/Nov/2019:22:05:07 +0100] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [07/Nov/2019:22:05:11 +0100] "GET /Form_Calculator/main2.jsp HTTP/1.1" 200 169
+127.0.0.1 - - [07/Nov/2019:22:06:04 +0100] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [07/Nov/2019:22:06:04 +0100] "GET /Form_Calculator/main1.html HTTP/1.1" 200 551
+0:0:0:0:0:0:0:1 - - [07/Nov/2019:22:06:10 +0100] "POST /Form_Calculator/main1.jsp HTTP/1.1" 404 1103
+0:0:0:0:0:0:0:1 - - [07/Nov/2019:22:06:21 +0100] "POST /Form_Calculator/main1.jsp HTTP/1.1" 404 1103
+0:0:0:0:0:0:0:1 - - [07/Nov/2019:22:06:22 +0100] "POST /Form_Calculator/main1.jsp HTTP/1.1" 404 1103
+0:0:0:0:0:0:0:1 - - [07/Nov/2019:22:06:26 +0100] "POST /Form_Calculator/main1.jsp HTTP/1.1" 404 1103
+0:0:0:0:0:0:0:1 - - [07/Nov/2019:22:06:54 +0100] "GET /Serie1_exercice1_Sol_1/main1.html HTTP/1.1" 404 1111
+127.0.0.1 - - [07/Nov/2019:22:09:50 +0100] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [07/Nov/2019:22:09:51 +0100] "GET /Form_Calculator/main1.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [07/Nov/2019:22:13:05 +0100] "GET /Form_Calculator/main1.html HTTP/1.1" 304 -
