@@ -3,6 +3,7 @@
 	<name>Serie2Excercice1</name>
 	<comment></comment>
 	<projects>
+		<project>mysql-connector-java-5.1.48</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

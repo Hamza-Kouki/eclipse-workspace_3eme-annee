@@ -1,2 +1,5 @@
 #Tomcat publish data
-#Sat Nov 23 16:56:07 GMT+01:00 2019
+#Tue Dec 10 22:34:53 GMT+01:00 2019
+org.eclipse.jst.j2ee.server\:jstl=WEB-INF/lib/jstl.jar
+org.eclipse.jst.j2ee.server\:standard=WEB-INF/lib/standard.jar
+org.eclipse.jst.j2ee.server\:mysql-connector-java-5.1.48=WEB-INF/lib/mysql-connector-java-5.1.48.jar

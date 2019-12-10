@@ -3,6 +3,9 @@
 	<name>Serie3Excercice1</name>
 	<comment></comment>
 	<projects>
+		<project>mysql-connector-java-5.1.48</project>
+		<project>jstl</project>
+		<project>standard</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

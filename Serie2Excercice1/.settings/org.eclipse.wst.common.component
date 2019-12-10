@@ -2,6 +2,9 @@
     <wb-module deploy-name="Serie2Excercice1">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <dependent-module archiveName="mysql-connector-java-5.1.48.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/mysql-connector-java-5.1.48/mysql-connector-java-5.1.48">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="Serie2Excercice1"/>
         <property name="java-output-path" value="/Serie2Excercice1/build/classes"/>
     </wb-module>

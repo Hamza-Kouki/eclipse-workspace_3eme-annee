@@ -13,6 +13,6 @@
   <module moduleId="org.eclipse.jst.jee.server:Serie3Excercice1" serverId="Tomcat v9.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:soltion_2eme_degre_single_page" serverId="Tomcat v9.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:Serie1Excercice1Sol_2" serverId="Tomcat v9.0 Server at localhost"/>
-  <module moduleId="org.eclipse.jst.jee.server:Serie1Excercice1Sol_1" serverId="Tomcat v9.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:Serie1Excercice1Sol_1" serverId="Tomcat v9.0 Server at localhost(MOUHEB)"/>
   <module moduleId="org.eclipse.jst.jee.server:MVC" serverId="Tomcat v9.0 Server at localhost"/>
 </modules>

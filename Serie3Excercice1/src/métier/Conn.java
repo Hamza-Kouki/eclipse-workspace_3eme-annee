@@ -20,7 +20,7 @@ public class Conn {
 
         Class.forName("com.mysql.jdbc.Driver"); 
  //   this.conn =   DriverManager.getConnection("jdbc:mysql://localhost:3306/db_gestion?zeroDateTimeBehavior=convertToNull","root","");
-        this.conn =   DriverManager.getConnection("jdbc:mysql:localhost:3306","root","");
+        this.conn =   DriverManager.getConnection("jdbc:mysql:localhost:3306/etudiant","root","");
     System.out.println("Successfull Connection To Your DataBase : \n");
     System.out.println("Current database is : \"db_gestion\" => 'etudiant' .");
     
